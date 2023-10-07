@@ -1,4 +1,4 @@
-# Template for a vanilla JS project with webpack
+# Demo for a vanilla JS project with webpack
 
 ## A Single Page using an API
 
