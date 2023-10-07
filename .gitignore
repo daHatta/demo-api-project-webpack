@@ -1,0 +1,9 @@
+/assets
+/node_modules
+/public
+src/css/styles.css.map
+src/css/styles.scss
+src/css/sass
+.env
+info.txt
+webpack.config.txt
