@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // Menu Button
 const siteNavi = document.getElementById("mobileBtn");
@@ -13,7 +13,7 @@ siteNavi.addEventListener("click", function(event) {
     } else {
         btnMenuLabel.innerHTML = "Menu";
     }  
-})
+});
 
 // Check menu-class after Window resize
 window.addEventListener("resize", function(event) {
@@ -24,7 +24,7 @@ window.addEventListener("resize", function(event) {
         navBanner.classList.remove("mobile");
         btnMenuLabel.innerHTML = "Menu";
     }
-})
+});
 
 // Go-to-top Button
 const toTopBtn = document.getElementById("goToTop");
@@ -41,7 +41,7 @@ toTopBtn.addEventListener("click", function(event) {
     window.history.pushState("", document.title, window.location.pathname);
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-})
+});
 
 // Video Accordion via Youtube API
 const videoWrapper = document.getElementById("video-list-wrapper");
@@ -86,7 +86,7 @@ const getLatestFiveVideos = async () => {
             let index = key +1;
             let title = video.snippet.title.split("?");
             let headline = title[0] + "?";
-            let author = title[1];
+            //let author = title[1];
     
             videoList += `
                 <div class="video-item">
@@ -138,7 +138,7 @@ const getLatestFiveVideos = async () => {
     // Initialize first video
     showVideo(1);
 
-}
+};
 
 // Function to hide all videos
 const hideAllVideos = () => {
@@ -152,7 +152,7 @@ const hideAllVideos = () => {
         videoRegion.classList.replace("active", "hidden");
     }
 
-}
+};
 
 // Function to show specific video
 const showVideo = (item) => {
@@ -166,7 +166,7 @@ const showVideo = (item) => {
     activeButtonIcon.setAttribute("aria-hidden", "false");
     activeRegion.classList.replace("hidden", "active");
 
-}
+};
 
 // Function to activate video buttons
 const activateVideoButtons = (base) => {
@@ -180,7 +180,7 @@ const activateVideoButtons = (base) => {
         });
     });
 
-}
+};
 
 // Call youtube videos 
 getLatestFiveVideos();
@@ -270,7 +270,7 @@ const  validateForm = (formId) => {
             validIcon.classList.remove("hidden");
         }
     }
-}
+};
 
 // Call validate function
 validateForm("#contact-form");
@@ -306,7 +306,7 @@ const resetForm = (formId) => {
         invalidIcon.classList.add("hidden");
         errorMessage.textContent = "";
     }
-}
+};
 
 // Call reset function
 resetForm("#contact-form");
